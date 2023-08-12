@@ -1,0 +1,91 @@
+/* CSS ordering broadly following: https://9elements.com/css-rule-order/ */
+
+:root {
+    --colour-gray: #d7d7d7;
+    --colour-dark-gray: #cccccc;
+    
+    --colour-red: #ffaaaa;
+    --colour-orange: #ffc089;
+    --colour-yellow: #ffe18b;
+    --colour-green: #c8df91;
+    --colour-turqoise: #98eccc;
+    --colour-blue: #98eccc;
+    --colour-purple: #c9c5ff;
+    --colour-pink: #ffa4d0;
+}
+
+body {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.page-header {
+    justify-content: center;
+    display: flex;
+    margin: 0.5rem;
+    border-radius: 1em;
+    border: 2px solid var(--colour-gray);
+    width: clamp(320px, 80%, 50rem);
+    background-color: var(--colour-gray);
+}
+
+.nav-item {
+    border-radius: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    color: inherit;
+    text-decoration: inherit;
+
+    &:hover {
+        background-color: var(--colour-dark-gray);
+    }
+}
+
+.page-main {
+    width: clamp(280px, 75%, 50rem);
+}
+
+.intro {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+
+    & .pfp {
+        width: clamp(200px, 20%, 20%);
+    }
+
+    & h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    & p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+.card {
+    margin: 0.5rem;
+    border-radius: 3px;
+    border: 2px solid var(--card-colour, var(--colour-red));
+
+    & .card-header {
+        margin: 0px;
+        padding: 0.2em;
+
+        background-color: var(--card-colour, var(--colour-red));
+
+        & h3 {
+            margin: 0px;
+        }
+    }
+
+    & .card-body {
+        padding: 0.2em;
+    }
+}
