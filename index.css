@@ -1,4 +1,4 @@
-.intro {
+.page-main {
     align-items: center;
     flex-direction: column;
     display: flex;
@@ -15,5 +15,35 @@
     & p {
         margin-top: 0px;
         margin-bottom: 0px;
+    }
+}
+
+.socials {
+    margin-top: 20px;
+
+    .socials-links {
+        display: flex;
+    }
+}
+
+.socials-logo {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+.mastodon-logo {
+    fill: black;
+
+    &:hover {
+        fill: hsl(204deg, 71%, 50%);
+    }
+}
+
+.modrinth-logo {
+    fill: black;
+
+    &:hover {
+        fill: hsl(145deg, 78%, 48%);
     }
 }
