@@ -51,3 +51,22 @@
         fill: hsl(145deg, 78%, 48%);
     }
 }
+
+.oomfs {
+    display: flex;
+    flex-direction: row;
+}
+
+.oomf {
+    padding: 10px;
+}
+
+.oomf-img {
+    transition: transform 0.3s ease;
+    margin: 2px;
+    max-width: 5rem;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
